@@ -9,7 +9,7 @@
 
 import MainTabBar from './components/MainTabBar.vue'
 
-export default {
+export default { 
   name: 'app',
   components:{
     MainTabBar
