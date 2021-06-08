@@ -1,7 +1,11 @@
 <template>
-  <div id="app">
-    <main-tab-bar></main-tab-bar>
-    <router-view></router-view>
+  <div id="app" >
+    
+      <main-tab-bar></main-tab-bar>
+    
+   <keep-alive exclude="Detail">
+      <router-view></router-view>
+   </keep-alive>
   
   </div>
 </template>
@@ -13,8 +17,8 @@ export default {
   name: 'app',
   components:{
     MainTabBar
-
-  }
+  },
+  
 }
 </script>
 <style>
