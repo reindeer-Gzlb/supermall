@@ -11,7 +11,7 @@
         <goods-list ref="recommend" :goods= "recommends" />
         
       </scroll>
-      <detail-bottom-bar />
+      <detail-bottom-bar @addToCart = 'addToCart' />
   </div>
 </template>
 
@@ -118,6 +118,17 @@ export default {
     },
     titleClick(index){
       this.$refs.scroll.scrollTo(0, -this.themTopYs[index],200)
+    },
+    addToCart(){
+      const product = {}
+      product.image  = this.topImages[0];
+      product.title = this.goods.title
+      product.desc = this.goods.desc
+      product.price = this.goods.newPrice
+      product.iid = this.iid
+
+      // this.$store.commit('addCart',product)
+      this.$store.dispatch('addCart',product)
     }
   }
 }
