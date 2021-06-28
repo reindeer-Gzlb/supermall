@@ -137,7 +137,7 @@ export default {
     getHomeMultidata(){
       getHomeMultidata().then( res => {
       this.banners = res.data.banner.list;
-      this.recommends = res.data.recommend .list;
+      this.recommends = res.data.recommend.list;
     })
     },
     getHomeGoods(type){

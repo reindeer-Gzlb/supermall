@@ -1,4 +1,6 @@
 
+
+//防抖节流
 export function debounce (func,delay = 50){
   let timer = null
   return function(...args){

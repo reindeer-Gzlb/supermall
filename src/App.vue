@@ -9,7 +9,7 @@
   
   </div>
 </template>
-<script>
+<script> 
 
 import MainTabBar from './components/MainTabBar.vue'
 
